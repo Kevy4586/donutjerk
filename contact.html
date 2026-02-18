@@ -6,158 +6,9 @@
     <title>CONTACT - DONUT JERK</title>
     <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Share+Tech+Mono&display=swap" rel="stylesheet">
     
-    <style>
-        /* 1. Page & Background Setup */
-        body {
-            margin: 0;
-            font-family: 'Share Tech Mono', monospace;
-            color: #00ff41;
-            text-align: center;
-            overflow: hidden; /* Prevents scrollbars from the animation */
-            
-            /* Deep Space Gradient */
-            background: radial-gradient(circle at center, #1a0b2e 0%, #000000 100%);
-            height: 100vh;
-        }
-
-        /* 2. Star Animation Layer */
-        .star-field {
-            position: fixed;
-            top: 0; left: 0;
-            width: 100%; height: 100%;
-            z-index: -1; /* Puts stars BEHIND the text */
-        }
-
-        .stars {
-            width: 2px; height: 2px;
-            background: transparent;
-            /* Simple CSS Stars */
-            box-shadow: 
-                10vw 10vh #fff, 30vw 30vh #fff, 50vw 80vh #fff, 70vw 20vh #fff, 
-                90vw 90vh #fff, 20vw 60vh #fff, 80vw 50vh #fff, 40vw 10vh #fff;
-            animation: spaceScroll 20s linear infinite;
-        }
-
-        /* Create a second layer for depth */
-        .stars::after {
-            content: " ";
-            position: absolute;
-            top: 1000px; /* Offset the duplicate stars */
-            width: 2px; height: 2px;
-            background: transparent;
-            box-shadow: 
-                10vw 10vh #fff, 30vw 30vh #fff, 50vw 80vh #fff, 70vw 20vh #fff, 
-                90vw 90vh #fff, 20vw 60vh #fff, 80vw 50vh #fff, 40vw 10vh #fff;
-        }
-
-        @keyframes spaceScroll {
-            from { transform: translateY(0); }
-            to { transform: translateY(-1000px); }
-        }
-
-        /* 3. Navigation Bar */
-        .nav-bar {
-            background: rgba(0, 0, 0, 0.8);
-            border-bottom: 2px solid #00ff41;
-            padding: 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            box-shadow: 0 0 20px #00ff41;
-        }
-
-        .nav-btn {
-            text-decoration: none;
-            color: #00ff41;
-            border: 1px solid #00ff41;
-            padding: 5px 15px;
-            background: black;
-            font-weight: bold;
-        }
-
-        .nav-btn:hover { background: #00ff41; color: black; }
-
-        h1 {
-            font-family: 'Black Ops One';
-            font-size: 2.5rem;
-            margin: 0;
-            text-shadow: 0 0 10px #00ff41;
-        }
-
-        /* 4. Layout Grid */
-        .grid-container {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-            max-width: 1000px;
-            margin: 80px auto;
-            padding: 20px;
-        }
-
-        /* 5. Glass Cards */
-        .card {
-            border: 2px solid #00ff41;
-            background: rgba(0, 30, 0, 0.6); /* Semi-transparent Green */
-            padding: 20px;
-            box-shadow: 0 0 15px rgba(0, 255, 65, 0.2);
-            backdrop-filter: blur(4px); /* Blurs stars behind the box */
-        }
-
-        .card-title {
-            font-size: 1.5rem;
-            border-bottom: 1px dashed #00ff41;
-            padding-bottom: 10px;
-            margin-bottom: 15px;
-            color: white;
-            text-shadow: 0 0 5px white;
-        }
-
-        /* Status Lights */
-        .offline {
-            color: #ff4444;
-            border: 1px solid #ff4444;
-            padding: 5px;
-            margin-top: 15px;
-            display: inline-block;
-            font-size: 0.8rem;
-            background: rgba(50, 0, 0, 0.5);
-        }
-
-        .online {
-            color: cyan;
-            border: 1px solid cyan;
-            padding: 5px;
-            margin-top: 15px;
-            display: inline-block;
-            font-size: 0.8rem;
-            background: rgba(0, 50, 50, 0.5);
-        }
-
-        /* 6. Footer Button */
-        .footer { margin-top: 60px; }
-        
-        .big-back-btn {
-            display: inline-block;
-            padding: 15px 40px;
-            background: black;
-            border: 2px solid white;
-            color: white;
-            font-family: 'Black Ops One';
-            font-size: 1.2rem;
-            text-decoration: none;
-        }
-
-        .big-back-btn:hover { background: white; color: black; box-shadow: 0 0 20px white; }
-
-        /* Mobile Fix */
-        @media (max-width: 800px) { .grid-container { grid-template-columns: 1fr; } }
-    </style>
+    <link rel="stylesheet" href="contact.css">
 </head>
 <body>
-
-    <div class="star-field">
-        <div class="stars"></div>
-    </div>
 
     <div class="nav-bar">
         <a href="home.html" class="nav-btn"><</a>
@@ -165,7 +16,7 @@
         <a href="home.html" class="nav-btn">X</a>
     </div>
 
-    <div class="grid-container">
+    <div class="card-container">
         
         <div class="card">
             <div class="card-title">NORTHEAST</div>
@@ -179,8 +30,8 @@
             <div class="offline">[ SIGNAL LOST ]</div>
         </div>
 
-        <div class="card" style="border-color: cyan; box-shadow: 0 0 15px cyan;">
-            <div class="card-title" style="border-color: cyan; text-shadow: 0 0 10px cyan;">PSU SECTOR</div>
+        <div class="card" style="border-color: cyan;">
+            <div class="card-title" style="border-color: cyan;">PSU SECTOR</div>
             <p style="color: cyan;">** ONLINE **<br>Daily: 1100 - 2100</p>
             <div class="online">[ SYSTEMS ACTIVE ]</div>
         </div>

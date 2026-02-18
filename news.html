@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEWS - THE DAILY JERK</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Black+Ops+One&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    
+    <style>
+        /* 1. Deep Space Background */
+        body {
+            margin: 0;
+            font-family: 'Share Tech Mono', monospace;
+            background-color: #050011; /* Deep Purple/Black */
+            color: black;
+            
+            /* Simple Moving Stars Pattern */
+            background-image: radial-gradient(white 2px, transparent 2px);
+            background-size: 60px 60px;
+            animation: moveStars 60s linear infinite;
+        }
+
+        /* Makes the stars float down slowly */
+        @keyframes moveStars {
+            from { background-position: 0 0; }
+            to { background-position: 0 1000px; }
+        }
+
+        /* 2. Header Bar */
+        .header {
+            background: white;
+            border-bottom: 5px solid red;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-btn {
+            text-decoration: none;
+            font-size: 2rem;
+            color: black;
+            font-weight: bold;
+        }
+
+        .logo {
+            font-family: 'Bangers';
+            font-size: 3rem;
+            margin: 0;
+            letter-spacing: 2px;
+        }
+
+        /* 3. Scrolling Ticker */
+        .ticker-wrap {
+            background: red;
+            color: yellow;
+            font-family: 'Black Ops One';
+            white-space: nowrap;
+            overflow: hidden;
+            padding: 10px 0;
+            border-bottom: 2px solid white;
+        }
+
+        .ticker-text {
+            display: inline-block;
+            font-size: 1.5rem;
+            animation: scrollLeft 15s linear infinite;
+        }
+
+        @keyframes scrollLeft {
+            0% { transform: translateX(100%); }
+            100% { transform: translateX(-100%); }
+        }
+
+        /* 4. News Grid Layout */
+        .news-container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 20px;
+            display: grid;
+            grid-template-columns: 2fr 1fr; /* Large Left Col, Small Right Col */
+            gap: 20px;
+        }
+
+        .card {
+            background: white;
+            border: 4px solid black;
+            padding: 20px;
+            /* Neon Shadow Effect */
+            box-shadow: 10px 10px 0 #00ff41; 
+        }
+
+        .headline {
+            font-family: 'Bangers';
+            font-size: 2.5rem;
+            color: #d32f2f;
+            line-height: 1;
+            margin: 10px 0;
+        }
+
+        .sub-head {
+            font-family: 'Bangers';
+            font-size: 1.8rem;
+            color: blue;
+            margin: 0 0 10px 0;
+        }
+
+        /* 5. Footer */
+        .footer { text-align: center; margin-bottom: 50px; }
+        
+        .big-back-btn {
+            display: inline-block;
+            background: black;
+            color: white;
+            border: 2px solid white;
+            padding: 15px 40px;
+            font-family: 'Black Ops One';
+            text-decoration: none;
+            font-size: 1.2rem;
+        }
+        .big-back-btn:hover { background: white; color: black; }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <a href="home.html" class="nav-btn">⬅</a>
+        <h1 class="logo">THE DAILY JERK</h1>
+        <a href="home.html" class="nav-btn">X</a>
+    </div>
+
+    <div class="ticker-wrap">
+        <div class="ticker-text">
+            🚨 BREAKING: PIZZA DETECTED IN ORBIT /// RANCH SAUCE SUPPLY LOW /// MOON BASE OPENING SOON 🚨
+        </div>
+    </div>
+
+    <div class="news-container">
+        
+        <div class="card">
+            <div style="font-size:4rem; text-align:center; background:#222; padding:20px;">🛸🍕</div>
+            <p style="color:gray; font-size:0.8rem;">Feb 23, 2026 | GALACTIC SECTOR</p>
+            <h2 class="headline">ALIENS DEMAND PIZZA</h2>
+            <p><strong>OFFICIAL REPORT:</strong> Authorities confirm that the bright lights seen over NE 42nd Ave were not swamp gas, but a Class-5 UFO demanding our 18" Thin Crust pies.</p>
+            <p>"They specifically asked for the 'It's Always Sunny in Cully' pie," said the shift manager.</p>
+        </div>
+
+        <div class="sidebar">
+            <div class="card" style="margin-bottom: 20px; box-shadow: 10px 10px 0 magenta;">
+                <h3 class="sub-head">RANCH SHORTAGE?</h3>
+                <p>Rumors swirl that the secret Ranch supply is being stolen by time travelers.</p>
+            </div>
+
+            <div class="card" style="box-shadow: 10px 10px 0 cyan;">
+                <h3 class="sub-head">PIZZA RAT RETURNS</h3>
+                <p>The legendary Pizza Rat was seen boarding a shuttle to Mars.</p>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="footer">
+        <a href="home.html" class="big-back-btn">BACK TO SPACE</a>
+    </div>
+
+</body>
+</html>

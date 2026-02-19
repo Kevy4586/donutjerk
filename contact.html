@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CONTACT - DONUT JERK</title>
     <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Share+Tech+Mono&display=swap" rel="stylesheet">
-    
     <link rel="stylesheet" href="contact.css">
 </head>
 <body>
@@ -16,24 +15,28 @@
         <a href="home.html" class="nav-btn">X</a>
     </div>
 
+    <div class="time-box">
+        LOCAL SYSTEM TIME: <span id="clock">Loading...</span>
+    </div>
+
     <div class="card-container">
         
         <div class="card">
-            <div class="card-title">NORTHEAST</div>
-            <p><strong>OPERATIONS:</strong><br>Daily: 1130 - 2100</p>
-            <div class="offline">[ SIGNAL LOST ]</div>
+            <div class="card-title">Northeast</div>
+            <p>Every Day<br>11:30a to 9p</p>
+            <div class="badge badge-red">Coming Soon</div>
         </div>
 
         <div class="card">
-            <div class="card-title">SOUTHEAST</div>
-            <p><strong>OPERATIONS:</strong><br>Sun-Thu: 1100 - 2100<br>Fri-Sat: 1100 - 2200</p>
-            <div class="offline">[ SIGNAL LOST ]</div>
+            <div class="card-title">Southeast</div>
+            <p>Sun to Thurs<br>11a to 9p<br><br>Fri & Sat<br>11a to 10p</p>
+            <div class="badge badge-red">Coming Soon</div>
         </div>
 
-        <div class="card" style="border-color: cyan;">
-            <div class="card-title" style="border-color: cyan;">PSU SECTOR</div>
-            <p style="color: cyan;">** ONLINE **<br>Daily: 1100 - 2100</p>
-            <div class="online">[ SYSTEMS ACTIVE ]</div>
+        <div class="card psu-card">
+            <div class="card-title psu-title">PSU - New!</div>
+            <p class="psu-text"><strong>Open NOW!</strong><br>Every Day<br>11:00a to 9p</p>
+            <div class="badge badge-cyan">Coming Soon</div>
         </div>
 
     </div>
@@ -41,6 +44,17 @@
     <div class="footer">
         <a href="home.html" class="big-back-btn">RETURN TO ORBIT</a>
     </div>
+
+    <script>
+        function updateClock() {
+            var now = new Date();
+            var timeString = now.toLocaleTimeString(); // Gets standard AM/PM time
+            document.getElementById('clock').innerHTML = timeString;
+        }
+        
+        setInterval(updateClock, 1000); // Tells the clock to update every 1 second
+        updateClock(); // Runs it immediately when the page loads
+    </script>
 
 </body>
 </html>

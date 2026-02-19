@@ -1,2 +1,0 @@
-# donutjerk
-coursework 1

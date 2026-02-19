@@ -1,152 +1,201 @@
-/* 1. Deep Space Background */
+/* 1. Page & Background Setup */
 body {
     margin: 0;
-    padding-top: 100px; /* IMPORTANT: Pushes content down so it doesn't hide behind the fixed header */
-    font-family: 'Lexend Mega', sans-serif;
-    color: #fff;
-    text-align: center;
+    font-family: Arial, sans-serif;
+    background-color: black;
+    color: white;
     
-    /* Deep Nebula Gradient */
-    background-color: #050011;
-    background: radial-gradient(circle at bottom, #1b003a 0%, #000 70%);
-    
-    /* Moving Stars Pattern */
-    min-height: 100vh;
+    /* YOUR NEW PEXELS STARRY SKY BACKGROUND */
+    background-image: url('https://images.pexels.com/photos/1341279/pexels-photo-1341279.jpeg?cs=srgb&dl=pexels-kaip-1341279.jpg&fm=jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center; 
 }
 
-/* Star Animation Layer */
-.stars {
-    position: fixed; top: 0; left: 0; width: 100%; height: 100%;
-    background-image: radial-gradient(white 2px, transparent 2px);
-    background-size: 50px 50px;
-    animation: moveStars 100s linear infinite;
-    z-index: -1;
-    pointer-events: none;
-}
-
-@keyframes moveStars {
-    from { background-position: 0 0; }
-    to { background-position: 0 1000px; }
-}
-
-/* 2. STATIONARY NAVIGATION BAR (Fixed) */
+/* 2. Header Bar */
 .nav-bar {
-    position: fixed; /* Locks to the top */
-    top: 0; 
-    left: 0;
-    width: 100%;
-    box-sizing: border-box; /* Ensures padding doesn't widen the page */
-    
-    background: rgba(0, 0, 0, 0.9); /* See-through black */
-    border-bottom: 3px solid #ff6ec7; /* Neon Pink Line */
-    box-shadow: 0 0 30px #ff6ec7; /* Pink Glow */
-    
-    padding: 10px 30px;
+    background-color: rgba(0, 0, 0, 0.9);
+    border-bottom: 3px solid cyan;
+    padding: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    z-index: 1000; /* Keeps it on top of everything */
-    backdrop-filter: blur(5px);
 }
 
-.nav-btn {
+.nav-bar a {
+    color: cyan;
     text-decoration: none;
-    color: #ff6ec7;
-    border: 2px solid #ff6ec7;
-    padding: 5px 15px;
     font-weight: bold;
-    font-size: 1.5rem;
-    background: black;
-    font-family: 'Bangers';
-    transition: 0.3s;
+    font-size: 20px;
 }
-.nav-btn:hover { background: #ff6ec7; color: black; box-shadow: 0 0 15px #ff6ec7; }
 
-/* 3. COOLER TITLE STYLES */
-.page-title {
-    font-family: 'Bangers';
-    font-size: 3.5rem;
+.nav-bar h1 {
+    color: fuchsia;
+    font-family: 'Black Ops One', sans-serif;
     margin: 0;
-    letter-spacing: 5px;
-    
-    /* Holographic Gradient Text */
-    background: linear-gradient(45deg, #ff00cc, #00ffff, #ff00cc);
-    background-size: 200% auto;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    
-    /* Neon Glow Shadow */
-    filter: drop-shadow(0 0 5px #ff00cc);
-    animation: shine 3s linear infinite;
+    font-size: 36px;
 }
 
-@keyframes shine {
-    to { background-position: 200% center; }
+/* 3. Javascript Recommendation Box */
+.js-box {
+    text-align: center;
+    margin: 40px auto;
+    background-color: black;
+    border: 3px solid lime;
+    padding: 20px;
+    max-width: 600px;
+}
+
+.js-box button {
+    background-color: lime;
+    color: black;
+    font-family: 'Black Ops One', sans-serif;
+    font-size: 18px;
+    padding: 10px 20px;
+    border: 2px solid white;
+    cursor: pointer;
+}
+
+.js-box button:hover { 
+    background-color: white; 
+}
+
+#recommendation {
+    font-family: 'Black Ops One', sans-serif;
+    color: yellow;
+    font-size: 22px;
+    margin-top: 15px;
+    margin-bottom: 0;
 }
 
 /* 4. Main Menu Container */
 .menu-box {
-    max-width: 900px;
+    max-width: 1000px;
     margin: 40px auto;
-    background: rgba(0, 0, 0, 0.85);
-    border: 8px solid #ff6ec7;
-    padding: 30px;
-    box-shadow: 0 0 50px rgba(255, 110, 199, 0.2);
+    background-color: rgba(0, 0, 0, 0.85);
+    border: 5px solid fuchsia;
+    padding: 40px;
 }
 
-.subtitle { color: #ccc; font-size: 0.9rem; margin-bottom: 30px; font-family: sans-serif; border-bottom: 1px solid #333; padding-bottom: 20px;}
+.main-title {
+    font-size: 60px;
+    color: fuchsia;
+    font-family: 'Bangers', sans-serif;
+    text-align: center;
+    margin: 0;
+}
 
-/* 5. The 2-Column Grid */
-.grid-layout {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+.subtitle { 
+    color: #cccccc; 
+    font-size: 18px; 
+    text-align: center;
+    border-bottom: 2px dashed #333; 
+    padding: 20px 0;
+    margin-bottom: 30px;
+    line-height: 1.5;
+}
+
+.gluten-free {
+    color: lime;
+    font-weight: bold;
+}
+
+/* 5. Flexbox 2-Column Layout */
+.menu-columns {
+    display: flex;
+    flex-wrap: wrap; 
     gap: 50px;
-    text-align: left;
 }
 
-/* 6. Menu Items */
+.column {
+    flex: 1; 
+    min-width: 300px;
+}
+
+/* 6. Typography & Menu Items */
 h2 {
-    color: #ff6ec7;
-    border-bottom: 2px solid #5a5aff;
-    font-family: 'Bangers';
-    font-size: 2rem;
-    margin-top: 0;
-    letter-spacing: 1px;
-    text-shadow: 2px 2px black;
+    color: yellow;
+    border-bottom: 3px solid cyan;
+    font-family: 'Bangers', sans-serif;
+    font-size: 36px;
+    margin-top: 40px; 
+    padding-bottom: 10px;
+}
+
+.column h2:first-child {
+    margin-top: 0; 
 }
 
 .item {
-    display: flex; justify-content: space-between;
-    color: #5a5aff; /* Neon Blue */
-    margin-top: 15px; font-size: 0.9rem;
+    display: flex; 
+    justify-content: space-between;
+    color: white;
+    font-weight: bold;
+    margin-top: 20px; 
+    font-size: 18px;
 }
-.price { color: #ff6ec7; }
-.desc { font-size: 0.7rem; color: #bbb; margin-bottom: 5px; font-family: sans-serif; }
+
+.price { 
+    color: lime; 
+}
+
+.desc { 
+    font-size: 14px; 
+    color: #aaaaaa; 
+    margin-top: 5px; 
+    line-height: 1.5;
+}
 
 /* 7. QR Code Section */
 .qr-section {
-    margin-top: 40px; border-top: 2px solid #5a5aff; padding-top: 20px;
-    display: flex; justify-content: center; gap: 50px;
+    margin-top: 50px; 
+    border-top: 3px dashed fuchsia; 
+    padding-top: 40px;
+    display: flex; 
+    justify-content: center; 
+    flex-wrap: wrap;
+    gap: 40px;
 }
+
 .qr-box {
-    background: white; color: black; padding: 10px; font-weight: bold;
-    text-align: center; border: 2px solid #ff6ec7;
+    text-align: center;
+    background-color: white;
+    padding: 15px;
+    border: 4px solid cyan;
 }
-.qr-image { width: 80px; height: 80px; background: black; margin: 0 auto 5px auto; }
 
-/* 8. Bottom Back Button */
+.qr-box img {
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+    margin-bottom: 10px;
+}
+
+.qr-box p {
+    color: black;
+    font-family: 'Black Ops One', sans-serif;
+    margin: 0;
+    font-size: 20px;
+}
+
+/* 8. Footer Area */
+.footer-area {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
 .back-btn {
-    display: inline-block; margin: 40px auto; padding: 15px 40px;
-    background: black; border: 2px solid white; color: white;
-    text-decoration: none; font-weight: bold; font-family: 'Bangers';
-    font-size: 1.5rem; letter-spacing: 2px;
+    display: inline-block; 
+    padding: 15px 40px;
+    background-color: black; 
+    border: 3px solid white; 
+    color: white;
+    text-decoration: none; 
+    font-family: 'Bangers', sans-serif;
+    font-size: 28px; 
 }
-.back-btn:hover { background: white; color: black; box-shadow: 0 0 20px white; }
 
-/* Mobile Responsive */
-@media (max-width: 800px) { 
-    .grid-layout { grid-template-columns: 1fr; } 
-    .nav-bar { padding: 10px; }
-    .page-title { font-size: 2rem; }
-    .nav-btn { font-size: 1rem; padding: 5px 10px; }
+.back-btn:hover { 
+    background-color: white; 
+    color: black; 
 }

@@ -2,19 +2,16 @@
 body {
     margin: 0;
     height: 100vh;
-    background-color: #070714;
+    background-color: black;
     font-family: sans-serif;
     color: white;
     overflow: hidden; 
     
-    background-image: radial-gradient(rgba(255, 255, 255, 0.3) 2px, transparent 2px);
-    background-size: 100px 100px;
-    animation: starDrift 150s linear infinite; 
-}
-
-@keyframes starDrift {
-    from { background-position: 0 0; }
-    to { background-position: 1000px 1000px; }
+    /* YOUR AESTHETIC STARFALL GIF */
+    background-image: url('https://wallpapers-clan.com/wp-content/uploads/2024/03/starfall-night-sky-mountains-aesthetic-gif-preview-desktop-wallpaper.gif');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
 }
 
 /* 2. Top Space Clock */
@@ -25,9 +22,9 @@ body {
     transform: translateX(-50%);
     color: #00ffff; 
     font-family: 'Press Start 2P', monospace;
-    font-size: 1.3rem; /* INCREASED SIZE */
+    font-size: 1.5rem; /* BUMPED UP */
     background: rgba(0, 0, 0, 0.8);
-    padding: 15px 30px; /* INCREASED PADDING */
+    padding: 18px 35px; /* BUMPED UP */
     border: 2px solid #00ffff;
     z-index: 20;
 }
@@ -54,10 +51,15 @@ body {
     box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
 }
 
-.icon { font-size: 5rem; margin-bottom: 15px; display: block; }
+.icon { 
+    font-size: 6rem; /* BUMPED UP */
+    margin-bottom: 15px; 
+    display: block; 
+}
+
 .label { 
     font-family: 'Black Ops One'; 
-    font-size: 2.2rem; /* INCREASED SIZE */
+    font-size: 2.5rem; /* BUMPED UP */
     letter-spacing: 2px; 
     display: block;
 }
@@ -81,7 +83,7 @@ body {
 
 /* REAL IMAGE CSS */
 .donut-image {
-    width: 350px; 
+    width: 400px; /* BUMPED UP */
     height: auto;
     position: relative;
     z-index: 5;
@@ -91,7 +93,7 @@ body {
 
 .brand-name {
     font-family: 'Bangers';
-    font-size: 7rem; /* INCREASED SIZE */
+    font-size: 8rem; /* BUMPED UP */
     color: #ffff00;
     text-shadow: 4px 4px #ff0000, -2px -2px #000;
     position: absolute;
@@ -109,7 +111,7 @@ body {
     margin-top: 50px;
     color: #00ff00;
     font-family: 'Press Start 2P', monospace;
-    font-size: 1.1rem; /* Slightly larger */
+    font-size: 1.3rem; /* BUMPED UP */
     text-decoration: none;
     padding: 10px;
     background: black;
@@ -117,13 +119,14 @@ body {
 }
 .guestbook:hover { background: #00ff00; color: black; }
 
-/* Mobile Fix (Scales fonts down slightly on phones) */
+/* Mobile Fix (Scales fonts down slightly on phones so they fit) */
 @media (max-width: 900px) {
     body { overflow: auto; padding-top: 80px; }
     .corner-btn { position: static; display: block; margin: 20px auto; width: 250px; }
     .center-area { position: static; transform: none; margin: 60px auto; }
-    #clock-display { width: 90%; text-align: center; box-sizing: border-box; font-size: 1rem; }
-    .donut-image { width: 250px; }
-    .brand-name { font-size: 5rem; }
-    .label { font-size: 1.8rem; }
+    #clock-display { width: 90%; text-align: center; box-sizing: border-box; font-size: 1.2rem; }
+    .donut-image { width: 280px; }
+    .brand-name { font-size: 6rem; }
+    .label { font-size: 2rem; }
+    .icon { font-size: 4.5rem; }
 }

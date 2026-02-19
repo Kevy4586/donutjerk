@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DONUT JERK - DELIVERY</title>
     <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Black+Ops+One&display=swap" rel="stylesheet">
-    
     <link rel="stylesheet" href="delivery.css">
 </head>
 <body>
@@ -15,30 +15,27 @@
         <a href="home.html">X CLOSE</a>
     </div>
 
-    <br>
-    <p style="font-family: 'Black Ops One'; font-size: 22px; color: #00ff00; margin-top: 30px;">
-        SELECT YOUR ORBITAL DROP ZONE
-    </p>
+    <p class="drop-zone-text">SELECT YOUR ORBITAL DROP ZONE</p>
 
     <div class="card-container">
         
         <div class="card">
             <div class="emoji">🛸</div>
-            <h2>Southeast Sector</h2>
+            <h2>Southeast Location</h2>
             <p>Order Delivery from Doordash! (You Wish)</p>
             <button class="calc-btn" onclick="getETA()">CALCULATE ETA</button>
         </div>
 
         <div class="card">
             <div class="emoji">🚀</div>
-            <h2>Northeast Sector</h2>
+            <h2>Northeast Location</h2>
             <p>Order Delivery from UberEats! (In your dreams)</p>
             <button class="calc-btn" onclick="getETA()">CALCULATE ETA</button>
         </div>
 
         <div class="card">
             <div class="emoji">🛰️</div>
-            <h2>PSU Outpost</h2>
+            <h2>PSU Location</h2>
             <p>Order for Local Space Station Pickup!</p>
             <button class="calc-btn" onclick="getETA()">CALCULATE ETA</button>
         </div>
@@ -53,7 +50,6 @@
         function getETA() {
             // Pick a random number between 1 and 100
             var randomTime = Math.floor(Math.random() * 100) + 1;
-            
             // Put the text on the screen
             document.getElementById("eta-output").innerHTML = "ESTIMATED ETA: " + randomTime + " LIGHTYEARS";
         }

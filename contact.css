@@ -1,4 +1,4 @@
-/* 1. Page Setup & Real Background Image */
+/* 1. Page Setup & Animated GIF Background */
 body {
     margin: 0;
     font-family: 'Share Tech Mono', monospace;
@@ -6,15 +6,15 @@ body {
     text-align: center;
     background-color: black;
     
-    /* Matches the space image from your Delivery page */
-    background-image: url('https://images.unsplash.com/photo-1506703719100-a0f3a48c0f41?q=80&w=2000');
+    /* Pixel Art Space GIF */
+    background-image: url('https://cdnb.artstation.com/p/assets/images/images/058/523/795/original/teetuch-timgasigum-star-space.gif?1674371659');
     background-size: cover;
     background-attachment: fixed;
 }
 
 /* 2. Navigation Bar */
 .nav-bar {
-    background-color: rgba(0, 0, 0, 0.9); /* Mostly solid black */
+    background-color: rgba(0, 0, 0, 0.9);
     border-bottom: 3px solid #00ff41;
     padding: 20px;
     display: flex;
@@ -44,21 +44,34 @@ h1 {
     color: #00ff41;
 }
 
-/* 3. Layout Grid (Flexbox) */
+/* 3. NEW: Time Box Styles */
+.time-box {
+    background-color: rgba(0, 30, 0, 0.8); /* Dark green, slightly see-through */
+    border: 2px dashed #00ff41;
+    color: #00ff41;
+    font-size: 22px;
+    font-weight: bold;
+    padding: 15px;
+    margin: 40px auto 0 auto;
+    max-width: 400px;
+    border-radius: 5px;
+}
+
+/* 4. Layout Grid (Flexbox) */
 .card-container {
     display: flex;
     justify-content: center;
-    flex-wrap: wrap; /* Stacks on small screens */
+    flex-wrap: wrap; /* Lets cards stack on small screens */
     gap: 30px;
     max-width: 1000px;
-    margin: 80px auto;
+    margin: 40px auto;
     padding: 20px;
 }
 
-/* 4. Contact Cards */
+/* 5. Default Contact Cards (Green) */
 .card {
     border: 3px solid #00ff41;
-    background-color: rgba(0, 30, 0, 0.8); /* Dark green, slightly see-through */
+    background-color: rgba(0, 30, 0, 0.8);
     padding: 30px;
     width: 250px;
     border-radius: 10px;
@@ -78,28 +91,32 @@ p {
     line-height: 1.5;
 }
 
-/* 5. Status Badges */
-.offline {
-    color: #ff4444; /* Red */
-    border: 2px solid #ff4444;
+/* Custom Colors for the PSU Card */
+.psu-card { border-color: cyan; }
+.psu-title { border-color: cyan; }
+.psu-text { color: cyan; }
+
+/* 6. Status Badges */
+.badge {
     padding: 10px;
     margin-top: 20px;
     font-size: 14px;
     font-weight: bold;
+}
+
+.badge-red {
+    color: #ff4444; 
+    border: 2px solid #ff4444;
     background-color: rgba(50, 0, 0, 0.8);
 }
 
-.online {
+.badge-cyan {
     color: cyan;
     border: 2px solid cyan;
-    padding: 10px;
-    margin-top: 20px;
-    font-size: 14px;
-    font-weight: bold;
     background-color: rgba(0, 50, 50, 0.8);
 }
 
-/* 6. Footer Button */
+/* 7. Footer Button */
 .footer { 
     margin-top: 50px; 
     margin-bottom: 50px;

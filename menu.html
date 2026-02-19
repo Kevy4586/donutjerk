@@ -3,29 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MENU - PIZZA JERK</title>
-    <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Lexend+Mega:wght@700&display=swap" rel="stylesheet">
+    <title>MENU - DONUT JERK</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Black+Ops+One&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="menu.css">
 </head>
 <body>
 
-    <div class="stars"></div>
-
     <div class="nav-bar">
-        <a href="home.html" class="nav-btn">⬅</a>
-        <h1 class="page-title">MENU</h1>
-        <a href="home.html" class="nav-btn">X</a>
+        <a href="home.html">⬅ BACK</a>
+        <h1>MENU</h1>
+        <a href="home.html">X CLOSE</a>
+    </div>
+
+    <div class="js-box">
+        <button onclick="recommendPizza()">WHAT SHOULD I EAT?</button>
+        <p id="recommendation">PRESS BUTTON FOR COMPUTER RECOMMENDATION</p>
     </div>
 
     <div class="menu-box">
         
-        <h1 style="font-size: 4rem; margin-bottom: 5px; color: #ff6ec7; font-family: 'Bangers';">PIZZA JERK</h1>
-        <div class="subtitle">18" Thin Crust / 12" Thick Pan Crust</div>
+        <h1 class="main-title">PIZZA JERK</h1>
+        
+        <div class="subtitle">
+            5028 NE 42nd Ave Portland, OR 97218 | 503-284-9333<br><br>
+            18" Thin Crust / 12" Thick Pan Crust<br>
+            <span class="gluten-free">Gluten free options available upon request!</span>
+        </div>
 
-        <div class="grid-layout">
+        <div class="menu-columns">
             
-            <div>
-                <h2>HOUSE SPECIALS</h2>
+            <div class="column">
+                <h2>HOUSE PIZZAS</h2>
+                
                 <div class="item"><span>CHEESE</span> <span class="price">$23 / $21</span></div>
                 
                 <div class="item"><span>PEPPERONI</span> <span class="price">$26 / $23.5</span></div>
@@ -40,64 +49,145 @@
                 <div class="desc">Canadian bacon, pepperoni, sausage, bacon, meatballs</div>
 
                 <div class="item"><span>CLAM JAM</span> <span class="price">$28 / $24</span></div>
-                <div class="desc">Clams, white wine, cream, garlic, oregano</div>
+                <div class="desc">Clams, white wine, cream, garlic, oregano, chili flake, pecorino</div>
 
                 <div class="item"><span>KALE BLAZER</span> <span class="price">$29 / $25</span></div>
-                <div class="desc">Fennel sausage, kale, hot peppers, garlic</div>
+                <div class="desc">Fennel sausage, kale, Bunk hot peppers, garlic</div>
 
-                <div class="item"><span>SUNNY IN CULLY</span> <span class="price">$30 / $25.5</span></div>
-                <div class="desc">Pepperoni, pineapple, hot peppers, basil, honey</div>
+                <div class="item"><span>VEGGIE SUPER PIE</span> <span class="price">$28 / $24</span></div>
+                <div class="desc">Black olive, bell pepper, mushroom, red onion</div>
 
-                <h2 style="margin-top: 30px;">JERK GOES VEGAN</h2>
+                <div class="item"><span>SUPER PIE</span> <span class="price">$30 / $25.5</span></div>
+                <div class="desc">Fennel sausage, pepperoni, black olive, bell pepper, mushroom, red onion</div>
+
+                <div class="item"><span>LOVELY LINDA</span> <span class="price">$29 / $24</span></div>
+                <div class="desc">Roasted fennel, red onion, kalamata olive, mushroom, garlic, basil</div>
+
+                <div class="item"><span>IT'S ALWAYS SUNNY IN CULLY</span> <span class="price">$30 / $25.5</span></div>
+                <div class="desc">Pepperoni, pineapple, Bunk hot peppers, basil, honey</div>
+
+                <div class="item"><span>WHITE PIE</span> <span class="price">$27 / $23.5</span></div>
+                <div class="desc">Ricotta, fresh mozzarella, garlic, chili flake & black pepper, basil</div>
+
+                <div class="item"><span>MEATBALL PARMIGIANA</span> <span class="price">$28 / $24</span></div>
+                <div class="desc">House made meatballs, garlic, basil</div>
+
+                <div class="item"><span>EGGPLANT PARMIGIANA</span> <span class="price">$28 / $24</span></div>
+                <div class="desc">Fried eggplant Parmesan, garlic, basil</div>
+
+
+                <h2>PIZZA JERK GOES VEGAN</h2>
+                
                 <div class="item"><span>VEGAN CHEESE</span> <span class="price">$23 / $21</span></div>
+                <div class="desc">Follow Your Heart vegan mozzarella, house made cashew ricotta</div>
+
                 <div class="item"><span>VEGAN PEPPERONI</span> <span class="price">$26 / $23.5</span></div>
+                <div class="desc">Follow Your Heart vegan mozzarella, house made cashew ricotta, vegan pepperoni</div>
+
                 <div class="item"><span>VEGAN MARGHERITA</span> <span class="price">$26 / $23</span></div>
+                <div class="desc">Follow Your Heart vegan mozzarella, house made cashew ricotta, garlic, basil</div>
+
+                <div class="item"><span>VEGAN SAUSAGE</span> <span class="price">$30 / $25.5</span></div>
+                <div class="desc">Follow Your Heart vegan mozzarella, house made cashew ricotta, vegan sausage, mushrooms, garlic, basil</div>
+
                 <div class="item"><span>VEGAN KALE BLAZER</span> <span class="price">$29 / $25</span></div>
+                <div class="desc">Follow Your Heart vegan mozzarella, house made cashew ricotta, kale, vegan sausage, garlic, Bunk hot peppers</div>
+
+                <div class="item"><span>VEGAN LOVELY LINDA</span> <span class="price">$29 / $24</span></div>
+                <div class="desc">Follow Your Heart vegan mozzarella, house made cashew ricotta, garlic, kalamata olives, mushrooms, roasted fennel, red onion, basil</div>
+
+                <div class="item"><span>VEGAN SUPER VEGGIE</span> <span class="price">$28 / $24</span></div>
+                <div class="desc">Follow Your Heart vegan mozzarella, house made cashew ricotta, black olive, bell pepper, mushroom, red onion</div>
+
+                <div class="item"><span>VEGAN SUPER PIE</span> <span class="price">$30 / $25.5</span></div>
+                <div class="desc">Follow Your Heart vegan mozzarella, cashew ricotta, vegan sausage, vegan pepperoni, black olive, bell pepper, mushroom, red onion</div>
+
+                <div class="item"><span>VEGAN SUNNY IN CULLY</span> <span class="price">$30 / $25.5</span></div>
+                <div class="desc">Follow Your Heart vegan mozzarella, house made cashew ricotta, vegan pepperoni, pineapple, Bunk hot peppers, basil, honey</div>
             </div>
 
-            <div>
-                <h2>SALADS</h2>
-                <div class="desc" style="font-size: 0.9rem; color: white;">Feeds 2 people, $6 each</div>
-                <div class="item"><span>CAESAR SALAD</span></div>
-                <div class="item"><span>GREEK SALAD</span></div>
-                <div class="item"><span>RANCH SALAD</span></div>
-                <div class="item"><span>BLEU CHEESE SALAD</span></div>
+            <div class="column">
+                
+                <h2>BUILD YOUR OWN</h2>
+                <div class="item"><span>BASE PIZZA</span> <span class="price">Starting at $23 / $20</span></div>
+                <div class="desc">
+                    <span style="color: cyan;">$1 / $.75:</span> red onions, garlic, basil, black olives, bell pepper, jalapeno<br>
+                    <span style="color: cyan;">$2 / $1.50:</span> fennel, kalamata olives, feta, mushrooms, pineapple, cherry tomatoes, Bunk hot peppers, fresh mozzarella, ricotta<br>
+                    <span style="color: cyan;">$3 / $2:</span> fennel sausage, pepperoni, vegan sausage, vegan pepperoni, Canadian bacon, bacon<br>
+                    <span style="color: cyan;">$4 / $3:</span> Meatballs, anchovies, eggplant<br>
+                    <br><span style="color: fuchsia; font-style: italic;">1/2 and 1/2 pizzas are available, only on our 18" Thin Crust option!</span>
+                </div>
 
-                <h2 style="margin-top: 30px;">SAUCES</h2>
+                <h2>LUNCH (11:30 - 4:00)</h2>
+                <div class="item"><span>SLICE SPECIAL</span> <span class="price">$8.00</span></div>
+                <div class="desc">2 slices and a soda</div>
+                <div class="item"><span>LYDIA SPECIAL</span> <span class="price">$10.00</span></div>
+                <div class="desc">Slice, salad, and a soda</div>
+
+                <h2>SALADS (Feeds 2, $6 each)</h2>
+                <div class="item"><span>CAESAR SALAD</span></div>
+                <div class="desc">Romaine, shaved Parmesan, croutons</div>
+                
+                <div class="item"><span>GREEK SALAD</span></div>
+                <div class="desc">Romaine, radicchio, kalamata olives, cucumbers, cherry tomatoes, feta, pepperoncinis</div>
+                
+                <div class="item"><span>RANCH SALAD</span></div>
+                <div class="desc">Romaine, cherry tomato, fennel, mushroom, herbs, bacon bits, fried onions</div>
+                
+                <div class="item"><span>BLEU CHEESE SALAD</span></div>
+                <div class="desc">Romaine, radish, cherry tomato, bleu cheese crumbles, pickled celery, bacon bits</div>
+
+                <div class="item"><span>VEGAN GREEK SALAD</span></div>
+                <div class="desc">Romaine, radicchio, kalamata olive, cucumber, cherry tomato, vegan feta, pepperoncini</div>
+
+                <div class="item"><span>VEGAN RANCH SALAD</span></div>
+                <div class="desc">Romaine, cherry tomato, fennel, mushrooms, herbs, fried onions, vegan ranch</div>
+
+                <h2>SAUCES</h2>
                 <div class="item"><span>OG RANCH</span> <span class="price">$.50</span></div>
                 <div class="item"><span>TRUFFLE RANCH</span> <span class="price">$1.00</span></div>
                 <div class="item"><span>VEGAN RANCH</span> <span class="price">$1.00</span></div>
-                <div class="item"><span>AARDVARK SAUCE</span> <span class="price">$1.00</span></div>
-                <div class="item"><span>BOAT SAUCE</span> <span class="price">$1.00</span></div>
+                <div class="item"><span>MARINARA</span> <span class="price">$.50</span></div>
+                <div class="item"><span>BLEU CHEESE</span> <span class="price">$.50</span></div>
+                <div class="item"><span>AARDVARK SAUCE (2oz)</span> <span class="price">$1.00</span></div>
+                <div class="item"><span>BOAT SAUCE (2oz)</span> <span class="price">$1.00</span></div>
 
-                <h2 style="margin-top: 30px;">SLICES & LUNCH</h2>
+                <h2>SLICES (All Day!)</h2>
                 <div class="item"><span>CHEESE SLICE</span> <span class="price">$3.25</span></div>
                 <div class="item"><span>PEPPERONI SLICE</span> <span class="price">$3.75</span></div>
                 <div class="item"><span>DAILY SLICE</span> <span class="price">$4.00</span></div>
-                <div class="item"><span>LUNCH SPECIAL</span> <span class="price">$8.00</span></div>
-                <div class="desc">2 slices and a soda (11:30-4:00)</div>
 
-                <h2 style="margin-top: 30px;">DESSERTS</h2>
+                <h2>DESSERTS</h2>
                 <div class="item"><span>RICE KRISPIE TREATS</span> <span class="price">$2.75</span></div>
-                <div class="item"><span>SOFT SERVE</span> <span class="price">$3.00</span></div>
+                <div class="item"><span>SOFT SERVE ICE CREAM</span> <span class="price">$3.00</span></div>
             </div>
 
         </div>
 
         <div class="qr-section">
             <div class="qr-box">
-                <div class="qr-image"></div>
-                DOORDASH
+                <img src="https://fluz.app/us/wp-content/uploads/2023/11/DoorDash-QR-code.png" alt="DoorDash">
+                <p>DOORDASH</p>
             </div>
             <div class="qr-box">
-                <div class="qr-image"></div>
-                UBER EATS
+                <img src="https://cn-geo1.uber.com/image-proc/crop/resizecrop/udam/format=auto/width=552/height=368/srcb64=aHR0cHM6Ly90Yi1zdGF0aWMudWJlci5jb20vcHJvZC91ZGFtLWFzc2V0cy9kZDNkNjY0Zi00ODU4LTU4ZGMtYTUwYy0zMTdlZWYwZWNhODkucG5n" alt="UberEats">
+                <p>UBER EATS</p>
             </div>
         </div>
 
     </div>
 
-    <a href="home.html" class="back-btn">BACK TO SPACE</a>
+    <div class="footer-area">
+        <a href="home.html" class="back-btn">BACK TO SPACE</a>
+    </div>
+
+    <script>
+        function recommendPizza() {
+            var pizzas = ["THE MEATZZA!", "VEGAN KALE BLAZER!", "IT'S ALWAYS SUNNY IN CULLY!", "THE LOVELY LINDA!", "THE CLAM JAM!"];
+            var randomPick = pizzas[Math.floor(Math.random() * pizzas.length)];
+            document.getElementById("recommendation").innerHTML = "RECOMMENDED: " + randomPick;
+        }
+    </script>
 
 </body>
 </html>

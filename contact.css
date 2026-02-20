@@ -1,18 +1,18 @@
-/* 1. Page Setup & Animated GIF Background */
+/* the moving space background. made it fixed so it doesn't scroll with the page */
 body {
     margin: 0;
     font-family: 'Share Tech Mono', monospace;
-    color: #00ff41; /* Hacker Green */
+    color: #00ff41; /* matrix green */
     text-align: center;
     background-color: black;
     
-    /* Pixel Art Space GIF */
+    /* the gif link */
     background-image: url('https://cdnb.artstation.com/p/assets/images/images/058/523/795/original/teetuch-timgasigum-star-space.gif?1674371659');
     background-size: cover;
     background-attachment: fixed;
 }
 
-/* 2. Navigation Bar */
+/* top menu bar. using flex to push the buttons to the edges */
 .nav-bar {
     background-color: rgba(0, 0, 0, 0.9);
     border-bottom: 3px solid #00ff41;
@@ -32,6 +32,7 @@ body {
     font-size: 20px;
 }
 
+/* flips the colors when you hover over it */
 .nav-btn:hover { 
     background-color: #00ff41; 
     color: black; 
@@ -44,9 +45,9 @@ h1 {
     color: #00ff41;
 }
 
-/* 3. NEW: Time Box Styles */
+/* the clock box. gave it some padding so the text isn't squished */
 .time-box {
-    background-color: rgba(0, 30, 0, 0.8); /* Dark green, slightly see-through */
+    background-color: rgba(0, 30, 0, 0.8); /* kinda see through dark green */
     border: 2px dashed #00ff41;
     color: #00ff41;
     font-size: 22px;
@@ -57,18 +58,18 @@ h1 {
     border-radius: 5px;
 }
 
-/* 4. Layout Grid (Flexbox) */
+/* this lines up the info cards. wrap makes them stack if you're on a phone */
 .card-container {
     display: flex;
     justify-content: center;
-    flex-wrap: wrap; /* Lets cards stack on small screens */
+    flex-wrap: wrap; 
     gap: 30px;
     max-width: 1000px;
     margin: 40px auto;
     padding: 20px;
 }
 
-/* 5. Default Contact Cards (Green) */
+/* the actual location boxes. kinda see-through green with rounded corners */
 .card {
     border: 3px solid #00ff41;
     background-color: rgba(0, 30, 0, 0.8);
@@ -91,12 +92,12 @@ p {
     line-height: 1.5;
 }
 
-/* Custom Colors for the PSU Card */
+/* making the psu one blue just to be different */
 .psu-card { border-color: cyan; }
 .psu-title { border-color: cyan; }
 .psu-text { color: cyan; }
 
-/* 6. Status Badges */
+/* coming soon tags. pushed them down so they don't hit the text */
 .badge {
     padding: 10px;
     margin-top: 20px;
@@ -116,12 +117,13 @@ p {
     background-color: rgba(0, 50, 50, 0.8);
 }
 
-/* 7. Footer Button */
+/* just adding some space around the footer */
 .footer { 
     margin-top: 50px; 
     margin-bottom: 50px;
 }
 
+/* big back button at the bottom */
 .big-back-btn {
     display: inline-block;
     padding: 15px 40px;
@@ -134,6 +136,7 @@ p {
     border-radius: 10px;
 }
 
+/* flips button colors on hover */
 .big-back-btn:hover { 
     background-color: white; 
     color: black; 

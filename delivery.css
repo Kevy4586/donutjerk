@@ -1,4 +1,4 @@
-/* 1. Page & Space Background Setup */
+/* main page setup and the space background. fixed so it doesn't move when you scroll */
 body {
     margin: 0;
     background-color: black;
@@ -6,13 +6,13 @@ body {
     font-family: Arial, sans-serif;
     text-align: center;
     
-    /* YOUR NEW 4K GALAXY GIF */
+    /* the galaxy gif */
     background-image: url('https://windowscustomization.com/wp-content/uploads/2018/12/Galaxy-4K.gif');
     background-size: cover;
     background-attachment: fixed;
 }
 
-/* 2. Top Header Bar */
+/* top menu bar. flex pushes the back and close buttons to the edges */
 .top-bar {
     background-color: rgba(0, 0, 0, 0.9); 
     border-bottom: 3px solid cyan;
@@ -37,19 +37,19 @@ body {
     letter-spacing: 2px;
 }
 
-/* 3. Subtitle Text */
+/* the little subtitle text */
 .drop-zone-text {
     font-family: 'Black Ops One', sans-serif; 
     font-size: 22px; 
     color: lime; 
     margin-top: 30px;
-    background-color: rgba(0,0,0,0.6); /* Keeps text readable over the galaxy */
+    background-color: rgba(0,0,0,0.6); /* gave it a dark background so you can actually read it over the stars */
     display: inline-block;
     padding: 5px 15px;
     border-radius: 5px;
 }
 
-/* 4. Layout Grid for Cards */
+/* puts the cards in a row. wrap makes them stack on phones */
 .card-container {
     display: flex;
     justify-content: center;
@@ -58,7 +58,7 @@ body {
     margin-top: 30px;
 }
 
-/* 5. The Location Cards */
+/* the location boxes. see-through black with pink borders */
 .card {
     background-color: rgba(0, 0, 0, 0.85); 
     border: 3px solid fuchsia;
@@ -68,6 +68,7 @@ body {
     transition: 0.3s; 
 }
 
+/* makes the box float up a bit when you hover over it */
 .card:hover {
     border-color: cyan;
     transform: translateY(-5px); 
@@ -91,7 +92,7 @@ body {
     margin-bottom: 25px;
 }
 
-/* 6. Buttons Inside Cards */
+/* the calculate buttons inside the boxes */
 .calc-btn {
     background-color: fuchsia;
     color: white;
@@ -104,25 +105,26 @@ body {
     transition: 0.2s;
 }
 
+/* flips button colors on hover */
 .calc-btn:hover {
     background-color: white;
     color: black;
 }
 
-/* 7. ETA Output Text */
+/* where the random eta time shows up when you click */
 #eta-output {
     font-family: 'Black Ops One', sans-serif;
     font-size: 26px;
     color: lime; 
     margin: 40px auto;
     height: 30px; 
-    background-color: rgba(0,0,0,0.7); /* Keeps text readable over the galaxy */
+    background-color: rgba(0,0,0,0.7); /* dark background again so you can read it */
     display: table; 
     padding: 5px 15px;
     border-radius: 5px;
 }
 
-/* 8. Bottom Back Button */
+/* big back button at the bottom */
 .back-btn {
     display: inline-block;
     background-color: black;

@@ -1,17 +1,17 @@
-/* 1. Page Background & Glow Effect */
+/* dark background with matrix green text. the linear gradients make a cool terminal grid pattern */
 body { 
     margin: 0; 
     background-color: #0d0208; 
     color: #00ff41; 
     font-family: 'Share Tech Mono', monospace; 
     
-    /* Terminal Grid Pattern */
+    /* makes the grid lines */
     background-image: linear-gradient(rgba(0, 255, 65, 0.1) 1px, transparent 1px), 
                       linear-gradient(90deg, rgba(0, 255, 65, 0.1) 1px, transparent 1px); 
     background-size: 20px 20px; 
 }
 
-/* 2. Top Window Bar */
+/* top green bar. flex pushes the x and back buttons to the edges */
 .window-bar { 
     background-color: #00ff41; 
     color: black; 
@@ -21,6 +21,7 @@ body {
     align-items: center; 
 }
 
+/* top buttons */
 .win-btn { 
     text-decoration: none; 
     color: black; 
@@ -34,7 +35,7 @@ h1 {
     margin: 0; 
 }
 
-/* 3. Main Terminal Box */
+/* the main box holding everything. gave it a little green glowing shadow */
 .terminal-container { 
     max-width: 800px; 
     margin: 40px auto; 
@@ -44,16 +45,18 @@ h1 {
     box-shadow: 0 0 20px rgba(0, 255, 65, 0.2);
 }
 
+/* centers the connecting text */
 .status-msg {
     text-align: center;
 }
 
+/* the line across the middle */
 hr {
     border: 1px dashed #00ff41; 
     margin: 30px 0;
 }
 
-/* 4. Form Styling */
+/* the form inputs. transparent background so the grid shows through */
 input, textarea { 
     width: 100%; 
     background-color: transparent; 
@@ -62,10 +65,12 @@ input, textarea {
     padding: 12px; 
     font-family: 'Share Tech Mono', monospace; 
     margin-bottom: 15px; 
-    box-sizing: border-box; /* Keeps borders inside the 100% width */
+    /* keeps the borders from stretching the box past 100% wide */
+    box-sizing: border-box; 
     outline: none;
 }
 
+/* the submit button. big and green */
 button { 
     width: 100%; 
     background-color: #00ff41; 
@@ -77,11 +82,12 @@ button {
     cursor: pointer; 
 }
 
+/* turns white on hover */
 button:hover {
     background-color: white;
 }
 
-/* 5. Visitor Entry Style */
+/* the guestbook messages. gave them a green border on the left side */
 .entry { 
     border-left: 4px solid #00ff41; 
     padding-left: 15px; 
@@ -93,7 +99,7 @@ button:hover {
     color: white; 
 }
 
-/* 6. Back Button */
+/* big back button at the bottom */
 .big-back-btn { 
     display: block; 
     width: 250px; 
@@ -107,6 +113,7 @@ button:hover {
     font-family: 'Press Start 2P', monospace; 
 }
 
+/* flips colors on hover */
 .big-back-btn:hover {
     background-color: #00ff41;
     color: black;

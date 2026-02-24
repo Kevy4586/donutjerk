@@ -1,7 +1,7 @@
 /* the moving space background. made it fixed so it doesn't scroll with the page */
 body {
     margin: 0;
-    font-family: 'Share Tech Mono', monospace;
+    font-family: 'Share Tech Mono';
     color: #00ff41; /* matrix green */
     text-align: center;
     background-color: black;
@@ -39,7 +39,7 @@ body {
 }
 
 h1 {
-    font-family: 'Black Ops One', sans-serif;
+    font-family: 'Black Ops One';
     font-size: 40px;
     margin: 0;
     color: #00ff41;
@@ -92,11 +92,6 @@ p {
     line-height: 1.5;
 }
 
-/* making the psu one blue just to be different */
-.psu-card { border-color: cyan; }
-.psu-title { border-color: cyan; }
-.psu-text { color: cyan; }
-
 /* coming soon tags. pushed them down so they don't hit the text */
 .badge {
     padding: 10px;
@@ -130,7 +125,7 @@ p {
     background-color: black;
     border: 3px solid white;
     color: white;
-    font-family: 'Black Ops One', sans-serif;
+    font-family: 'Black Ops One';
     font-size: 24px;
     text-decoration: none;
     border-radius: 10px;

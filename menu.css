@@ -1,7 +1,7 @@
 /* main page setup and the starry sky background. fixed keeps it from scrolling */
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: Arial;
     background-color: black;
     color: white;
     
@@ -31,7 +31,7 @@ body {
 
 .nav-bar h1 {
     color: fuchsia;
-    font-family: 'Black Ops One', sans-serif;
+    font-family: 'Black Ops One';
     margin: 0;
     font-size: 36px;
 }
@@ -49,7 +49,7 @@ body {
 .js-box button {
     background-color: lime;
     color: black;
-    font-family: 'Black Ops One', sans-serif;
+    font-family: 'Black Ops One';
     font-size: 18px;
     padding: 10px 20px;
     border: 2px solid white;
@@ -62,7 +62,7 @@ body {
 }
 
 #recommendation {
-    font-family: 'Black Ops One', sans-serif;
+    font-family: 'Black Ops One';
     color: yellow;
     font-size: 22px;
     margin-top: 15px;
@@ -81,7 +81,7 @@ body {
 .main-title {
     font-size: 60px;
     color: fuchsia;
-    font-family: 'Bangers', sans-serif;
+    font-family: 'Bangers';
     text-align: center;
     margin: 0;
 }
@@ -90,15 +90,9 @@ body {
     color: #cccccc; 
     font-size: 18px; 
     text-align: center;
-    border-bottom: 2px dashed #333; 
     padding: 20px 0;
     margin-bottom: 30px;
     line-height: 1.5;
-}
-
-.gluten-free {
-    color: lime;
-    font-weight: bold;
 }
 
 /* puts the menu into two columns. wrap makes it stack on phones */
@@ -116,8 +110,7 @@ body {
 /* the food items. flex makes the name and price sit on opposite sides */
 h2 {
     color: yellow;
-    border-bottom: 3px solid cyan;
-    font-family: 'Bangers', sans-serif;
+    font-family: 'Bangers';
     font-size: 36px;
     margin-top: 40px; 
     padding-bottom: 10px;
@@ -174,7 +167,7 @@ h2 {
 
 .qr-box p {
     color: black;
-    font-family: 'Black Ops One', sans-serif;
+    font-family: 'Black Ops One';
     margin: 0;
     font-size: 20px;
 }
@@ -193,7 +186,7 @@ h2 {
     border: 3px solid white; 
     color: white;
     text-decoration: none; 
-    font-family: 'Bangers', sans-serif;
+    font-family: 'Bangers';
     font-size: 28px; 
 }
 

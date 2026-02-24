@@ -3,7 +3,7 @@ body {
     margin: 0;
     background-color: black;
     color: white;
-    font-family: Arial, sans-serif;
+    font-family: Arial;
     text-align: center;
     
     /* the galaxy gif */
@@ -31,7 +31,7 @@ body {
 
 .top-bar h1 {
     color: fuchsia; 
-    font-family: 'Black Ops One', sans-serif;
+    font-family: 'Black Ops One';
     margin: 0;
     font-size: 36px;
     letter-spacing: 2px;
@@ -39,7 +39,7 @@ body {
 
 /* the little subtitle text */
 .drop-zone-text {
-    font-family: 'Black Ops One', sans-serif; 
+    font-family: 'Black Ops One'; 
     font-size: 22px; 
     color: lime; 
     margin-top: 30px;
@@ -80,29 +80,24 @@ body {
 }
 
 .card h2 {
-    font-family: 'Bangers', sans-serif;
+    font-family: 'Bangers';
     color: yellow;
     font-size: 32px;
     margin: 0 0 10px 0;
 }
 
-.card p {
-    font-size: 16px;
-    color: #cccccc; 
-    margin-bottom: 25px;
-}
 
 /* the calculate buttons inside the boxes */
 .calc-btn {
     background-color: fuchsia;
     color: white;
-    font-family: 'Black Ops One', sans-serif;
+    font-family: 'Black Ops One';
     font-size: 16px;
     padding: 12px 20px;
     border: 2px solid white;
     border-radius: 8px;
     cursor: pointer;
-    transition: 0.2s;
+
 }
 
 /* flips button colors on hover */
@@ -113,7 +108,7 @@ body {
 
 /* where the random eta time shows up when you click */
 #eta-output {
-    font-family: 'Black Ops One', sans-serif;
+    font-family: 'Black Ops One';
     font-size: 26px;
     color: lime; 
     margin: 40px auto;
@@ -131,13 +126,13 @@ body {
     border: 3px solid white;
     border-radius: 10px;
     color: white;
-    font-family: 'Bangers', sans-serif;
+    font-family: 'Bangers';
     font-size: 28px;
     text-decoration: none;
     padding: 15px 40px;
     margin-bottom: 50px;
     letter-spacing: 2px;
-    transition: 0.2s;
+
 }
 
 .back-btn:hover {

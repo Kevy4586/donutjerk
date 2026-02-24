@@ -18,10 +18,9 @@ body {
 #clock-display {
     position: absolute;
     top: 20px;
-    left: 50%;
-    transform: translateX(-50%);
+    left: 35%;
     color: #00ffff; 
-    font-family: 'Press Start 2P', monospace;
+    font-family: 'Press Start 2P';
     font-size: 1.5rem; 
     background: rgba(0, 0, 0, 0.8);
     padding: 18px 35px; 
@@ -78,7 +77,6 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
-    cursor: pointer; 
     z-index: 5;
 }
 
@@ -97,7 +95,6 @@ body {
     font-family: 'Bangers';
     font-size: 8rem; 
     color: #ffff00;
-    text-shadow: 4px 4px #ff0000, -2px -2px #000;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -112,7 +109,7 @@ body {
     display: inline-block;
     margin-top: 50px;
     color: #00ff00;
-    font-family: 'Press Start 2P', monospace;
+    font-family: 'Press Start 2P';
     font-size: 1.3rem; 
     text-decoration: none;
     padding: 10px;
@@ -123,14 +120,3 @@ body {
 /* flips colors on hover */
 .guestbook:hover { background: #00ff00; color: black; }
 
-/* fixing it for phones. makes it so you can actually scroll and shrinks the giant text */
-@media (max-width: 900px) {
-    body { overflow: auto; padding-top: 80px; }
-    .corner-btn { position: static; display: block; margin: 20px auto; width: 250px; }
-    .center-area { position: static; transform: none; margin: 60px auto; }
-    #clock-display { width: 90%; text-align: center; box-sizing: border-box; font-size: 1.2rem; }
-    .donut-image { width: 280px; }
-    .brand-name { font-size: 6rem; }
-    .label { font-size: 2rem; }
-    .icon { font-size: 4.5rem; }
-}

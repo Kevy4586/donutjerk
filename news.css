@@ -1,7 +1,7 @@
 /* space background gif. fixed makes it stay put when you scroll */
 body {
     margin: 0;
-    font-family: 'Share Tech Mono', monospace;
+    font-family: 'Share Tech Mono';
     background-color: black;
     color: black; /* making sure text inside the white boxes stays black */
     
@@ -29,7 +29,7 @@ body {
 }
 
 .logo {
-    font-family: 'Bangers', sans-serif;
+    font-family: 'Bangers';
     font-size: 48px;
     margin: 0;
     letter-spacing: 2px;
@@ -39,7 +39,7 @@ body {
 .ticker-wrap {
     background-color: red;
     color: yellow;
-    font-family: 'Black Ops One', sans-serif;
+    font-family: 'Black Ops One';
     text-align: center; 
     padding: 15px;
     border-bottom: 2px solid white;
@@ -79,12 +79,9 @@ body {
     background-color: white;
     border: 4px solid black;
     padding: 20px;
-    box-shadow: 10px 10px 0 lime; 
+
 }
 
-/* changing the shadow colors for the side boxes just for fun */
-.side-card-magenta { box-shadow: 10px 10px 0 fuchsia; }
-.side-card-cyan { box-shadow: 10px 10px 0 cyan; }
 
 /* making the text and emojis inside the boxes look right */
 .article-img {
@@ -100,7 +97,7 @@ body {
 }
 
 .headline {
-    font-family: 'Bangers', sans-serif;
+    font-family: 'Bangers';
     font-size: 40px;
     color: #d32f2f; /* dark red */
     line-height: 1;
@@ -108,7 +105,7 @@ body {
 }
 
 .sub-head {
-    font-family: 'Bangers', sans-serif;
+    font-family: 'Bangers';
     font-size: 28px;
     color: blue;
     margin: 0 0 10px 0;
@@ -132,10 +129,9 @@ p {
     color: white;
     border: 3px solid white;
     padding: 15px 40px;
-    font-family: 'Black Ops One', sans-serif;
+    font-family: 'Black Ops One';
     text-decoration: none;
     font-size: 20px;
-    transition: 0.2s;
 }
 
 /* flips colors when hovering */
